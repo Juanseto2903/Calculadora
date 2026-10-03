@@ -6,7 +6,7 @@ package modelo;
 
 /**
  *
- * @author all of us
+ * @author juans
  */
 
 public class Multiplicar extends OperacionBinaria {

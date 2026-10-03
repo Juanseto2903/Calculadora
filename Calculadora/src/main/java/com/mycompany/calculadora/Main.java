@@ -7,15 +7,27 @@ package com.mycompany.calculadora;
  *
  * @author all of us
  */
+
 import controlador.CalculadoraControlador;
 import modelo.Calculadora;
+import modelo.Dividir;
+import modelo.Multiplicar;
+import modelo.Restar;
+import modelo.Sumar;
 import vista.CalculadoraVista;
 
 public class Main {
 
     public static void main(String[] args) {
         Calculadora modelo = new Calculadora();
-        // TODO: registrar aquí las operaciones a medida que se creen
+
+        // Operaciones binarias
+        modelo.registrar(new Sumar());
+        modelo.registrar(new Restar());
+        modelo.registrar(new Multiplicar());
+        modelo.registrar(new Dividir());
+
+        // Operaciones unarias (las registra el compañero 2)
 
         CalculadoraVista vista = new CalculadoraVista();
         CalculadoraControlador controlador = new CalculadoraControlador(modelo, vista);
