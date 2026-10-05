@@ -112,3 +112,18 @@ public class CalculadoraVista extends JFrame {
         filaBinarias.add(btnRestar);
         filaBinarias.add(btnMultiplicar);
         filaBinarias.add(btnDividir);
+        
+
+// Fila de operaciones unarias (solo usan el Número 1)
+        JPanel filaUnarias = new JPanel(new GridLayout(1, 3, 8, 8));
+        btnRaizCuadrada = crearBoton("√");
+        btnRaizCubica = crearBoton("∛");
+        btnLogaritmo = crearBoton("ln");
+        filaUnarias.add(btnRaizCuadrada);
+        filaUnarias.add(btnRaizCubica);
+        filaUnarias.add(btnLogaritmo);
+ 
+        panel.add(filaBinarias);
+        panel.add(filaUnarias);
+        return panel;
+    }
