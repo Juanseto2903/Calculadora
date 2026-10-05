@@ -8,17 +8,4 @@ package modelo;
  *
  * @author juans
  */
-public class LogaritmoNatural extends OperacionUnaria {
- 
-    public LogaritmoNatural() {
-        super("Logaritmo natural", "ln");
-    }
- 
-    @Override
-    public double calcular(double a) {
-        if (a <= 0) {
-            throw new ArithmeticException("El logaritmo natural solo está definido para números mayores que cero");
-        }
-        return Math.log(a);
-    }
-}
+public class LogaritmoNatural

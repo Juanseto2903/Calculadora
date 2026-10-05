@@ -8,8 +8,8 @@ package modelo;
  *
  * @author juans
  */
-public class RaizCuadrada extends OperacionUnaria {
- 
+//Raiz cuadrada
+public class RaizCuadrada extends OperacionUnaria { 
     public RaizCuadrada() {
         super("Raíz cuadrada", "√");
     }
