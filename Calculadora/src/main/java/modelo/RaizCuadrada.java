@@ -6,15 +6,14 @@ package modelo;
 
 /**
  *
- * @author sebas
+ * @author juans
  */
 //Raiz cuadrada
-public class RaizCuadrada extends OperacionUnaria {
-
+public class RaizCuadrada extends OperacionUnaria { 
     public RaizCuadrada() {
         super("Raíz cuadrada", "√");
     }
-
+ 
     @Override
     public double calcular(double a) {
         if (a < 0) {

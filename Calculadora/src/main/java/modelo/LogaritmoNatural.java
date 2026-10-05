@@ -6,14 +6,14 @@ package modelo;
 
 /**
  *
- * @author sebas
+ * @author juans
  */
 public class LogaritmoNatural extends OperacionUnaria {
-
+ 
     public LogaritmoNatural() {
         super("Logaritmo natural", "ln");
     }
-
+ 
     @Override
     public double calcular(double a) {
         if (a <= 0) {

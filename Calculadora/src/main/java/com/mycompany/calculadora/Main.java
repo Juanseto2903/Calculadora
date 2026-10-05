@@ -33,7 +33,7 @@ public class Main {
         modelo.registrar(new RaizCuadrada());
         modelo.registrar(new RaizCubica());
         modelo.registrar(new LogaritmoNatural());
-
+        
         CalculadoraVista vista = new CalculadoraVista();
         CalculadoraControlador controlador = new CalculadoraControlador(modelo, vista);
         controlador.iniciar();
