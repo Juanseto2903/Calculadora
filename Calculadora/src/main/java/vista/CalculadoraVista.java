@@ -53,7 +53,7 @@ public class CalculadoraVista extends JFrame {
         Font fuente = new Font("SansSerif", Font.PLAIN, 18);
         txtNum1.setFont(fuente);
         txtNum2.setFont(fuente);
-        txtResultado.setFont(fuente.deriveFont(Font.BOLD));
+        txtResultado.setFont(fuente.deriveFont(Font.BOLD, 14f));
         txtNum1.setHorizontalAlignment(SwingConstants.RIGHT);
         txtNum2.setHorizontalAlignment(SwingConstants.RIGHT);
         txtResultado.setHorizontalAlignment(SwingConstants.RIGHT);
