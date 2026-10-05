@@ -127,3 +127,24 @@ public class CalculadoraVista extends JFrame {
         panel.add(filaUnarias);
         return panel;
     }
+    
+// Botón limpiar (parte inferior)
+    private JPanel crearPanelLimpiar() {
+        JPanel panel = new JPanel(new BorderLayout());
+        panel.setBorder(BorderFactory.createEmptyBorder(5, 15, 15, 15));
+        btnLimpiar = crearBoton("C");
+        btnLimpiar.setForeground(Color.WHITE);
+        btnLimpiar.setBackground(new Color(200, 60, 60));
+        btnLimpiar.setOpaque(true);
+        btnLimpiar.setPreferredSize(new Dimension(0, 45));
+        panel.add(btnLimpiar, BorderLayout.CENTER);
+        return panel;
+    }
+ 
+    private JButton crearBoton(String texto) {
+        JButton boton = new JButton(texto);
+        boton.setFont(new Font("SansSerif", Font.BOLD, 20));
+        boton.setFocusPainted(false);
+        return boton;
+    }
+}
