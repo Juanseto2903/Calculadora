@@ -6,19 +6,66 @@ package vista;
  * @author all of us
  */
 
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.GridLayout;
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.SwingConstants;
-
+ 
 public class CalculadoraVista extends JFrame {
-
+ 
+    // Componentes públicos: el controlador (compañero 4) los usa directamente
+    public JTextField txtNum1, txtNum2, txtResultado;
+    public JButton btnSumar, btnRestar, btnMultiplicar, btnDividir;
+    public JButton btnRaizCuadrada, btnRaizCubica, btnLogaritmo;
+    public JButton btnLimpiar;
+ 
     public CalculadoraVista() {
         setTitle("Calculadora POO");
+        setMinimumSize(new Dimension(340, 440));
         setSize(380, 480);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
-
-        // TODO: construir la interfaz gráfica (pantalla, botones, etc.)
-        add(new JLabel("Calculadora en construcción", SwingConstants.CENTER));
+        setLayout(new BorderLayout(10, 10));
+ 
+        add(crearPanelPantalla(), BorderLayout.NORTH);
+        add(crearPanelOperaciones(), BorderLayout.CENTER);
+        add(crearPanelLimpiar(), BorderLayout.SOUTH);
+ 
+        setVisible(true);
     }
-}
+ 
+    // Pantalla: operando 1, operando 2 y resultado
+    private JPanel crearPanelPantalla() {
+        JPanel panel = new JPanel(new GridLayout(3, 2, 8, 8));
+        panel.setBorder(BorderFactory.createEmptyBorder(15, 15, 5, 15));
+ 
+        txtNum1 = new JTextField();
+        txtNum2 = new JTextField();
+        txtResultado = new JTextField();
+        txtResultado.setEditable(false);
+ 
+        Font fuente = new Font("SansSerif", Font.PLAIN, 18);
+        txtNum1.setFont(fuente);
+        txtNum2.setFont(fuente);
+        txtResultado.setFont(fuente.deriveFont(Font.BOLD));
+        txtNum1.setHorizontalAlignment(SwingConstants.RIGHT);
+        txtNum2.setHorizontalAlignment(SwingConstants.RIGHT);
+        txtResultado.setHorizontalAlignment(SwingConstants.RIGHT);
+ 
+        panel.add(new JLabel("Número 1:"));
+        panel.add(txtNum1);
+        panel.add(new JLabel("Número 2:"));
+        panel.add(txtNum2);
+        panel.add(new JLabel("Resultado:"));
+        panel.add(txtResultado);
+        return panel;
+    }
