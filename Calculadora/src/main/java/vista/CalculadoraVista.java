@@ -69,3 +69,30 @@ public class CalculadoraVista extends JFrame {
         panel.add(txtResultado);
         return panel;
     }
+    
+ // Pantalla: operando 1, operando 2 y resultado
+    private JPanel crearPanelPantalla() {
+        JPanel panel = new JPanel(new GridLayout(3, 2, 8, 8));
+        panel.setBorder(BorderFactory.createEmptyBorder(15, 15, 5, 15));
+ 
+        txtNum1 = new JTextField();
+        txtNum2 = new JTextField();
+        txtResultado = new JTextField();
+        txtResultado.setEditable(false);
+ 
+        Font fuente = new Font("SansSerif", Font.PLAIN, 18);
+        txtNum1.setFont(fuente);
+        txtNum2.setFont(fuente);
+        txtResultado.setFont(fuente.deriveFont(Font.BOLD));
+        txtNum1.setHorizontalAlignment(SwingConstants.RIGHT);
+        txtNum2.setHorizontalAlignment(SwingConstants.RIGHT);
+        txtResultado.setHorizontalAlignment(SwingConstants.RIGHT);
+ 
+        panel.add(new JLabel("Número 1:"));
+        panel.add(txtNum1);
+        panel.add(new JLabel("Número 2:"));
+        panel.add(txtNum2);
+        panel.add(new JLabel("Resultado:"));
+        panel.add(txtResultado);
+        return panel;
+    }
