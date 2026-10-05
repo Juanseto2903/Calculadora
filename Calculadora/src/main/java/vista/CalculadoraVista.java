@@ -96,3 +96,19 @@ public class CalculadoraVista extends JFrame {
         panel.add(txtResultado);
         return panel;
     }
+    
+// Panel con los botones de operaciones
+    private JPanel crearPanelOperaciones() {
+        JPanel panel = new JPanel(new GridLayout(2, 1, 8, 8));
+        panel.setBorder(BorderFactory.createEmptyBorder(5, 15, 5, 15));
+ 
+        // Fila de operaciones binarias
+        JPanel filaBinarias = new JPanel(new GridLayout(1, 4, 8, 8));
+        btnSumar = crearBoton("+");
+        btnRestar = crearBoton("-");
+        btnMultiplicar = crearBoton("×");
+        btnDividir = crearBoton("÷");
+        filaBinarias.add(btnSumar);
+        filaBinarias.add(btnRestar);
+        filaBinarias.add(btnMultiplicar);
+        filaBinarias.add(btnDividir);
