@@ -7,7 +7,6 @@ package com.mycompany.calculadora;
  *
  * @author all of us
  */
-
 import controlador.CalculadoraControlador;
 import modelo.Calculadora;
 import modelo.Dividir;
